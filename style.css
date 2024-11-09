@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    * {
+margin: 0;
+padding: 0;
+}
+
+body{
+    background-color: #FEE2E2;
+    background-image: url("coracoes.gif");
+    background-size: 60%; /* Aumenta o GIF em 1.5 vezes */
+font-family: "Changa One", sans-serif;
+}
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 0.5vh;
+    margin-top: 4vh;
+    color: #870d65;
+    background-color: #e973bca2;
+    width: 40%;
+    margin-left: 45vh;
+}
+img {
+    width: 35vh;
+    border-radius: 50vh;
+    margin-left: 26vh;
+    box-shadow: 10px 5px 5px rgb(164, 164, 164);
+}
+h2 {
+    color: #B23981;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: -3vh;
+}
+#div_information p {
+    color: #D57B7C;
+    padding: 2vh;
+    text-align: center;
+}
+table {
+    border: 1px #1F618D solid;
+    font-size:25px; 
+    margin-left: 130px;
+    margin: auto;
+}
+
+
+tr {
+    border: 1px #1F618D solid;
+}
+
+td {
+    border: 1px #FFF9DD solid;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+button {
+    border: 0px;
+    background-color: #FFF9DD;
+    color: #870d65;
+    padding: 18px;
+    font-size: 25px;
+    border-radius: 24px;
+    font-family: "Changa One", sans-serif;
+}
+
+.container{
+    width: 1100px;
+    margin: auto;
+}
+
+#div_game {
+    background-color: #FFF9DD;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    border-radius: 6vh;
+}
+
+#div_questions{
+background-color:#FFF9DD;
+width: 700px;
+margin: auto;
+}
+span #span_questionText {
+    padding: 10vh;
+}
+.button{
+    margin: auto;
+    display: inline-block;
+}
+
+#button_verify {
+    width: 150px;
+    margin: auto;
+    background-color: #ffcee1;
+    margin-top: 1vh;
+}
+#input_answer{
+    width: 100px;
+    margin: auto;
+}
+
+.deadCell {
+    background-color: #ffcee1;
+}
+.availableCell{
+    background-color: #ffffff;
+}
+
+footer{
+    height: 80px;
+    background-color: #FFF9DD;
+    color: #ffffff;
+    font-size: 15px; 
+    margin-bottom: 0;
+    padding: 0;
+    bottom: 0;
+}
+footer p {
+    text-align: center;
+    background-color: #FFF9DD;
+    color: #B23981;
+}
+#div_information {
+    width: 600px;
+    margin: auto;
+    background-color: #ffcee1;
+    font-size: 18px;
+    padding: 3vh;
+    margin-top: 5vh;
+    border-radius: 20vh;
+    box-shadow: 10px 5px 5px #bdbdbd;
+}
+
+#div_verifiedAnswer{
+    width: 500px;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    vertical-align:center;
+    margin-bottom: 20px;
+}
+.correctAnswer{
+    background-color: #58D68D;
+    color: #196F3D;
+    border:1px #196F3D solid;
+}
+.wrongAnswer{
+    background-color: #EC7063  ;
+    color: #7B241C;
+    border:1px #7B241C solid;
+
+}

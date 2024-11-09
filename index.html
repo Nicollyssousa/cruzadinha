@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="cruzadinha.css">
-    <title>Palavras-Cruzadas</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <title>Palavras-Cruzadas & Carlos Santana</title>
+
 </head>
+
 <body>
     <header>
         <div class="container">
-            <img src="/img/laco.png">
             <h1>CRUZADINHA</h1><br>
             <div class="div_button">
-
+                <center>
+                    <button class="button" id="bt_start" onclick="start()">Começar!</button>
+                    <button class="button" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o
+                        Jogo</button>
+                </center>
             </div>
             <br>
         </div>
@@ -24,24 +29,18 @@
         <div class="container">
             <div style="display: none" id="div_verifiedAnswer">
                 <h3>Resposta Correta</h3>
-            </div >
-        <!--TELA DE INFORMAÇÕES-->
-            <div class="div_game">
-                <br>
-                <div id="div_comecar_jogo">
-                    <img id="gif_gato" src="../cruzadinha/img/gitGato.gif">
-                <button class="button" id="bt_start" onclick="window.location.href='./cruzadinha.html';">Começar!</button>
-                </div>
             </div>
+            <div id="div_game">
+                <br>
                 <div id="div_information">
+                    <img src="gatogif.gif">
                     <h2>Intruções do Jogo</h2><br><br>
                     <p>
-                        <p><li>Clique em "Começar o Jogo" para iniciar uma partida</li></p>
-                        <p><li>Perguntas serão exibidas na parte inferior do quadro</li></p>
-                        <p><li> Perguntas serão exibidas na parte inferior do quadro</li></p>
-                        <p><li>Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua
-                        resposta</li></p>
-                        <p><li>A partida acaba quando as 16 questões forem respondidas </li></p>
+                        Clique em "Começar o Jogo" para iniciar uma partida <br><br>
+                        Perguntas serão exibidas na parte inferior do quadro <br><br>
+                        Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua
+                        resposta<br><br>
+                        A partida acaba quando as 16 questões forem respondidas <br><br>
                     </p>
                 </div>
                 <br>
@@ -62,8 +61,12 @@
     </article><br><br>
     <footer>
         <div class="container"><br>
-            <p>By Luana Liriel e Nicolly Sousa
+            <p>Developed by Nicolly e Luana <br> <br>
+                1ADS-A
             </p>
         </div>
-    </footer></body>
+    </footer>
+
+</body>
+
 </html>
