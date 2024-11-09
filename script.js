@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="cruzadinha.css">
-</head>
-<body>
-    <center>
-
-        <button class="button" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o
-            Jogo</button>
-    </center>
-</body>
-</html>
-<script>
-    var special_words = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
+var special_words = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
 
 var questions_list = [
     'Qual é a sigla para Central Process Unit?',
@@ -434,4 +417,4 @@ function verify() {
     else {
         alert('Por Favor, digite uma resposta na caixa de texto');
     }
-}</script>
+}
