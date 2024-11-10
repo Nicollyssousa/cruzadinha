@@ -10,13 +10,14 @@
     <title>Palavras-Cruzadas & Carlos Santana</title>
 
 </head>
-
+<img src="">
 <body>
     <header>
         <div class="container">
+            <div id="imgLaco"><img src="img/laco.png"></div>
             <h1>CRUZADINHA</h1><br>
             <div class="div_button">
-                <center>
+                <center id="center">
                     <button class="button" id="bt_start" onclick="start()">Começar!</button>
                     <button class="button" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o
                         Jogo</button>
@@ -33,26 +34,27 @@
             <div id="div_game">
                 <br>
                 <div id="div_information">
-                    <img src="gatogif.gif">
-                    <h2>Intruções do Jogo</h2><br><br>
-                    <p>
-                        Clique em "Começar o Jogo" para iniciar uma partida <br><br>
-                        Perguntas serão exibidas na parte inferior do quadro <br><br>
-                        Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua
-                        resposta<br><br>
-                        A partida acaba quando as 16 questões forem respondidas <br><br>
+                    <div id="imgGato">
+                        <img src="img/gato.gif">
+                    </div>
+                    <h2>Intruções do Jogo</h2><br>
+                    <p id="lista">
+                        <li>em "Começar o Jogo" para iniciar uma partida</li>
+                        <li>Perguntas serão exibidas na parte inferior do quadro</li>
+                        <li>Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua resposta</li>
+                        <li>A partida acaba quando as 16 questões forem respondidas</li>
                     </p>
                 </div>
                 <br>
-                <div id="div_canvasCruzada"></div>
                 <br>
+
                 <div style="display: none" id="div_questions">
                     <center>
-                        <span id="span_questionText">Vamos encontrar as esferas do dragao</span>
-                        <input type="text" id="input_answer" placeholder="Sua Reposta"><br>
+                        <span id="span_questionText">Vamos encontrar as esferas do dragao</span><br><br>
+                        <input type="text" id="input_answer" placeholder="Sua Reposta">
                         <button id="button_verify" onclick="verify()" class="button">Verificar</button>
                     </center>
-
+                    <div id="div_canvasCruzada"></div>
 
                 </div>
             </div>

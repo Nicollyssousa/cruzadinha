@@ -1,23 +1,23 @@
 
-    var special_words = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
+var special_words = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
 
 var questions_list = [
-    'Qual componente executa as instruções de um computador?',
-    'O que realiza operações lógicas e aritméticas?',
-    'O que são unidades de armazenamento temporário dentro da CPU?',
-    'O que é memória volátil usada para acesso rápido?',
-    'O que é memória não volátil que armazena instruções essenciais para a inicialização?',
-    'Tipo de memória que guarda dados permanentemente, mas pode ser apagada e reprogramada com luz.',
-    'Tipo de memória não volátil que pode ser regravada eletricamente.',
-    'Onde guardamos dados permanentemente, mais lento que a RAM, mas com mais espaço.',
-    'O que permite a transferência de dados diretamente para a memória, sem o processador?',
-    'O que indica ao computador qual dispositivo acessar entre vários conectados?',
-    'O que transmite os endereços de memória para leitura ou gravação de dados?',
-    'O que transmite os dados entre os componentes do computador, como a memória e a CPU?',
-    'Processador Intel que oferece bom desempenho para tarefas cotidianas.',    
-    'Processador Intel projetado para tarefas exigentes como jogos e edição de vídeo.',
-    'Processador com dois núcleos para realizar várias tarefas ao mesmo tempo.',
-    'Processador com quatro núcleos, permitindo multitarefas simultâneas.'
+    'Qual é a sigla para Central Process Unit?',
+    'Um circuto digital que realiza operações lógicas e aritméticas. Qual é o nome deste componente?',
+    'Tipo de memória que se encontra no topo da hierarquia de memória',
+    'Tipo de memória volátil que tem como nome Random Acess Memory. Qual é a sigla deste componente?',
+    'Tipo de memória não volátil que oferece dados apenas para leitura',
+    'Tipo de memória não volátil que precisa ter seu chip exposto a luz ultravioleta para apagar seu conteúdo',
+    'Tipo particular de EEPROM que mantém as informações armazenadas sem a necessidade de uma fonte de energia elétrica',
+    'Tipo de memória que precisa ter seu conteúdo copiado na RAM para poder ser executado pela CPU',
+    'Permite que periféricos acessem diretamente a RAM sem ocupar processamento',
+    'Também conhecido como Slave Select (SS). Usado para selecionar um ou um conjunto de circuitos que estão conectados no computador',
+    'Grupo de linhas ou trilhas usadas para se referir a um endereço físico na memória. O número de trilhas determina a quantidade de endereços na memória física',
+    'Também chamado de Memory Bus. É responsável para carregar os dados.',
+    'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em setembro de 2009',
+    'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em novembro de 2008',    
+    'Tipo de processador que possui dois processadores ou melhor dizendo ‘dois centros, núcleos ou cores de execução‘ no mesmo circuito integrado.  Cada core tem sua própria memória cash e controlador o que permite que funcione mais efetivamente do que um processador single',
+    'Segue o mesmo princípio de um dual-core, mas agora em teoria tem o dobro da capacidade de processamento'
 ];
 
 var filledCell = [2, 20, 38, 133, 134, 135, 59, 77, 95, 113, 131, 149,
@@ -264,7 +264,7 @@ function start() {
     bt_start.style.display = 'none';
     bt_destroyGame.style.display = 'block';
     div_questions.style.display = 'block';
-    div_information.innerHTML = '';
+    div_information.style.display = 'none';
     renderGrid();
     gameSequence();
 
@@ -342,7 +342,7 @@ function gameSequence() {
 function pontuation() {
     div_information.style.display = 'block';
 
-    div_information.innerHTML = '<h1 style="text-align: center;">Parabéns!!</h1><br><br><p style="text-align: center;">Você finalizou o jogo</p><br><br>';
+    div_information.innerHTML = '<h1 style="font-size: 5vh;" style="text-align: center;">Parabéns!!</h1><br><br><p style="font-size: 5vh;"  style="text-align: center;">Você finalizou o jogo</p><br><br> <img src="img/gato2.gif">';
 }
 
 function renderGrid() {
@@ -394,7 +394,9 @@ function verify() {
     var answer = input_answer.value;
 
     if (answer != '') {
-        // answer = answer.toLowerCase();
+        // Limpa qualquer classe de resposta anterior
+        div_verifiedAnswer.classList.remove('wrongAnswer', 'correctAnswer');
+        
         if (answer == special_words[cont_correctAnswer]) {
             div_verifiedAnswer.classList.add('correctAnswer');
             div_verifiedAnswer.innerHTML = '<br>Resposta Correta!';
@@ -404,6 +406,7 @@ function verify() {
             div_verifiedAnswer.classList.add('wrongAnswer');
             div_verifiedAnswer.innerHTML = '<br>Resposta Incorreta, tente novamente';
         }
+        
         setTimeout(function () {
             div_verifiedAnswer.style.display = 'block';
         }, 500);
